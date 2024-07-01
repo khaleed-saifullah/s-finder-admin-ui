@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>S Finder Admin</title>
+</head>
+
+<body>
+  <main class="main-wrapper">
+    <!-- Left Sidebar -->
+    <section class="left-sidebar">
+      <nav class="admin-main-menu">
+        <ul>
+          <li>
+            <a href="#"><i class="bi bi-house"></i>Home</a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-info-circle"></i>Genaral Info</a>
+          </li>
+          <li>
+            <a href="#" class="active"><i class="bi bi-clipboard-data-fill"></i>Notice</a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-people-fill"></i>Users</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-hospital"></i>Hospitals</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-truck-medical"></i>Ambulances</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-regular fa-keyboard"></i>Equipments</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-notes-medical"></i>Health Tips</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-building-shield"></i>Terms & Policy</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <!-- Main Content -->
+    <section class="main-content">
+      <div class="home-wrapper">
+        <div class="section-header">
+          <h2>
+            Notice
+          </h2>
+        </div>
+        <div class="main-content-wrappper">
+          <div class="notice-wrapper">
+            <div class="text-end mb-4">
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addNotice">Add Notice</button>
+            </div>
+            <div class="list-table">
+              <table class="table table-bordered table-striped table-responsive">
+                <thead>
+                  <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Status</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Notice One</td>
+                    <td><span class="notice-description">
+                        We are very glad to announce our First season of iNwe Cricket Community Championship
+                      </span></td>
+                    <td>01-07-2024</td>
+                    <td><select class="form-select" aria-label="Default select example">
+                        <option>Select the satus</option>
+                        <option value="1">Pin</option>
+                        <option selected value="2">Unpin</option>
+                      </select></td>
+                    <td>
+                      <div class="table-action-btn">
+                        <i class="bi bi-eye-fill" data-bs-toggle="modal" data-bs-target="#viewNotice"></i>
+                        <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#editNotice"></i>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Notice Two</td>
+                    <td><span class="notice-description">
+                        We are very glad to announce our First season of iNwe Cricket Community Championship
+                      </span></td>
+                    <td>01-07-2024</td>
+                    <td><select class="form-select" aria-label="Default select example">
+                        <option>Select the satus</option>
+                        <option selected value="1">Pin</option>
+                        <option value="2">Unpin</option>
+                      </select></td>
+                    <td>
+                      <div class="table-action-btn">
+                        <i class="bi bi-eye-fill"></i>
+                        <i class="bi bi-pencil-square"></i>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="modal fade" id="viewNotice" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">View Notice</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h5>Notice Title</h5>
+            <p>Notice One</p>
+            <h5>Notice Description</h5>
+            <p>We are very glad to announce our First season of iNwe Cricket Community Championship</p>
+            <h5>Notice Date</h5>
+            <p>01-07-2024</p>
+            <h5>Notice Status</h5>
+            <p>Pinned</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="editNotice" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Notice</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label class="form-label">Notice Title</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Notice Description</label>
+                <textarea name="" id="" class="form-control"></textarea>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Notice Date</label>
+                <input type="date" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Notice Status</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option>Select the satus</option>
+                  <option selected value="1">Pin</option>
+                  <option value="2">Unpin</option>
+                </select>
+              </div>
+              <div class="text-end">
+                <button type="submit" class="btn btn-success">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="addNotice" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Add Notice</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label class="form-label">Notice Title</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Notice Description</label>
+                <textarea name="" id="" class="form-control"></textarea>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Notice Date</label>
+                <input type="date" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Notice Status</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Select the satus</option>
+                  <option value="1">Pin</option>
+                  <option value="2">Unpin</option>
+                </select>
+              </div>
+              <div class="text-end">
+                <button type="submit" class="btn btn-success">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

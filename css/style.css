@@ -17,6 +17,16 @@ body {
   src: url("../font/ShorifJonota.ttf");
 }
 
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
 /* =========== Main Wrapper Css =========== */
 .main-wrapper {
   min-height: 100vh;
@@ -56,18 +66,21 @@ body {
   font-size: 20px;
   line-height: 24px;
   transition: all 0.2s;
+  border: 1px solid transparent;
 }
 
 .admin-main-menu ul li a.active {
   background: var(--secondary-color);
   color: #fff;
   border-radius: 5px;
+  border: 1px solid #cd6c3a;
 }
 
 .admin-main-menu ul li a:hover {
   background: var(--secondary-color);
   color: #fff;
   border-radius: 5px;
+  border: 1px solid #cd6c3a;
 }
 
 .admin-main-menu ul li a i {
@@ -142,94 +155,32 @@ body {
   cursor: pointer;
 }
 
-.info-section-content h4 {
-  font-size: 24px;
-  line-height: 30px;
-  color: #000;
-  margin-bottom: 30px;
-  font-family: "bnagleFont";
-}
-
-.info-section-content p {
-  font-size: 20px;
-  line-height: 30px;
-  color: #3a3535;
-  margin-bottom: 20px;
-  font-family: "bnagleFont";
-}
-
-.info-section-content .edit-btn {
-  position: absolute;
-  top: 30px;
-  right: 100px;
-  background: #b7b7b7;
-  cursor: pointer;
-  height: 30px;
-  width: 30px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-}
-
-.info-section-editable-content form {
-  border: 1px solid #d9d9d9;
-  padding: 15px;
-  box-shadow: 0 0 5px 2px #e5e5e5;
-  border-radius: 5px;
-}
-.info-section-editable-content form textarea {
-  width: 100%;
-  border: 0;
-  font-size: 20px;
-  line-height: 30px;
-  color: #3a3535;
-  font-family: "bnagleFont";
-}
-
-.info-section-editable-content form textarea:focus-visible {
-  outline: 0;
-}
-
-.info-section-content .save-button {
-  margin-top: 30px;
-  text-align: right;
-}
-
-.info-section-content .save-button .btn {
-  padding: 6px 30px;
-}
-
-/* =========== Nurse List Page Css =========== */
-.nurses-list-content {
-  padding: 15px;
-}
-
-.list-table td {
-  font-size: 16px;
-  vertical-align: middle;
-}
-
-.nurse-reg-type {
-  width: 200px;
-}
-
 .list-table thead {
   background: #697feb;
 }
 
 .list-table thead th {
   color: #fff;
+  background: var(--primary-color);
+}
+
+.notice-description {
+  display: inline-block;
+  overflow: hidden;
+  width: 500px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .table-action-btn i {
-  color: #ff0000;
   cursor: pointer;
 }
 
 .table-action-btn {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .list-table {
