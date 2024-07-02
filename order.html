@@ -33,10 +33,10 @@
             <a href="#"><i class="bi bi-list-ul"></i>IC Lists</a>
           </li>
           <li>
-            <a href="#" class="active"><i class="bi bi-list-stars"></i>Products</a>
+            <a href="#"><i class="bi bi-list-stars"></i>Products</a>
           </li>
           <li>
-            <a href="#"><i class="bi bi-bag-check-fill"></i>Orders</a>
+            <a href="#" class="active"><i class="bi bi-bag-check-fill"></i>Orders</a>
           </li>
           <li>
             <a href="#"><i class="fa-solid fa-notes-medical"></i>Health Tips</a>
@@ -52,38 +52,47 @@
       <div class="home-wrapper">
         <div class="section-header">
           <h2>
-            Categories
+            Orders
           </h2>
         </div>
         <div class="main-content-wrappper">
           <div class="user-wrapper">
-            <div class="text-end mb-4">
-              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCategory">Add Category</button>
-            </div>
             <div class="list-table">
               <table class="table table-bordered table-striped table-responsive">
                 <thead>
                   <tr>
-                    <th scope="col">Name</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Order Amount</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Order Status</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>IC Chip One</td>
+                    <td>1</td>
+                    <td>Khaleed Saifullah</td>
+                    <td>338 Tk</td>
+                    <td>Mirpur 1,Dhaka</td>
+                    <td><span class="badge text-bg-warning">Running</span></td>
                     <td>
                       <div class="table-action-btn">
-                        <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#editCategory"></i>
-                        <i class="bi bi-trash3" data-bs-toggle="modal" data-bs-target="#deleteCategory"></i>
+                        <i class="bi bi-eye-fill" data-bs-toggle="modal" data-bs-target="#orderDetails"></i>
+                        <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#orderStatusChange"></i>
                       </div>
                     </td>
                   </tr>
                   <tr>
-                    <td>IC Chip Two</td>
+                    <td>2</td>
+                    <td>Khaleed Saifullah</td>
+                    <td>338 Tk</td>
+                    <td>Mirpur 1,Dhaka</td>
+                    <td><span class="badge text-bg-success">Completed</span></td>
                     <td>
                       <div class="table-action-btn">
-                        <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#editCategory"></i>
-                        <i class="bi bi-trash3" data-bs-toggle="modal" data-bs-target="#deleteCategory"></i>
+                        <i class="bi bi-eye-fill" data-bs-toggle="modal" data-bs-target="#orderDetails"></i>
+                        <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#orderStatusChange"></i>
                       </div>
                     </td>
                   </tr>
@@ -94,42 +103,33 @@
         </div>
       </div>
     </section>
-    <div class="modal fade" id="editCategory" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="orderDetails" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Category</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Order Details</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form>
-              <div class="mb-3">
-                <label class="form-label">Name</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="text-end">
-                <button type="submit" class="btn btn-success">Submit</button>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="deleteCategory" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Product</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <h4>Are you want to delete?</h4>
-            <div class="text-end">
-              <button type="submit" class="btn btn-danger">Delete</button>
+            <h5>Order ID</h5>
+            <p>1</p>
+            <h5>Order Products</h5>
+            <div class="order-product">
+              <h6 class="d-flex gap-3"><img src="images/product-image.png" alt="" class="">Hi6403 Power IC Chip</h6>
+              <p>x1</p>
             </div>
+            <div class="order-product">
+              <h6 class="d-flex gap-3"><img src="images/product-image.png" alt="" class="">Hi6403 Power IC Chip</h6>
+              <p>x1</p>
+            </div>
+            <h5>Order Amount</h5>
+            <p>350 Tk</p>
+            <h5>Order Delivery Info</h5>
+            <p class="mb-0">Khaleed Saifullah</p>
+            <p class="mb-0">01323719171</p>
+            <p>Mirpur 11,Dhaka</p>
+            <h5>Payment By</h5>
+            <p>Cash On Delivery</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -137,18 +137,23 @@
         </div>
       </div>
     </div>
-    <div class="modal fade" id="addCategory" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="orderStatusChange" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Add Category</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Order Status Change</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <form>
               <div class="mb-3">
-                <label class="form-label">Name</label>
-                <input type="text" class="form-control">
+                <label class="form-label">Order Status Change</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option>Select the satus</option>
+                  <option selected value="1">Running</option>
+                  <option value="2">Completed</option>
+                  <option value="3">Cancelled</option>
+                </select>
               </div>
               <div class="text-end">
                 <button type="submit" class="btn btn-success">Submit</button>
