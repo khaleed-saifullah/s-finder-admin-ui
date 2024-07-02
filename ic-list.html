@@ -24,13 +24,13 @@
             <a href="#"><i class="bi bi-info-circle"></i>Genaral Info</a>
           </li>
           <li>
-            <a href="#" class="active"><i class="bi bi-clipboard-data-fill"></i>Notice</a>
+            <a href="#"><i class="bi bi-clipboard-data-fill"></i>Notice</a>
           </li>
           <li>
             <a href="#"><i class="bi bi-people-fill"></i>Users</a>
           </li>
           <li>
-            <a href="#"><i class="bi bi-list-ul"></i>IC Lists</a>
+            <a href="#" class="active"><i class="bi bi-list-ul"></i>IC Lists</a>
           </li>
           <li>
             <a href="#"><i class="bi bi-list-stars"></i>Products</a>
@@ -52,59 +52,53 @@
       <div class="home-wrapper">
         <div class="section-header">
           <h2>
-            Notice
+            IC Lists
           </h2>
         </div>
         <div class="main-content-wrappper">
-          <div class="notice-wrapper">
+          <div class="user-wrapper">
             <div class="text-end mb-4">
-              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addNotice">Add Notice</button>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addIc">Add IC</button>
             </div>
             <div class="list-table">
               <table class="table table-bordered table-striped table-responsive">
                 <thead>
                   <tr>
-                    <th scope="col">Title</th>
+                    <th scope="col">Brand</th>
                     <th scope="col">Description</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Status</th>
+                    <th scope="col">Model</th>
+                    <th scope="col">Part No</th>
+                    <th scope="col">Code IC'S</th>
+                    <th scope="col">Location</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Notice One</td>
-                    <td><span class="notice-description">
-                        We are very glad to announce our First season of iNwe Cricket Community Championship
-                      </span></td>
-                    <td>01-07-2024</td>
-                    <td><select class="form-select" aria-label="Default select example">
-                        <option>Select the satus</option>
-                        <option value="1">Pin</option>
-                        <option selected value="2">Unpin</option>
-                      </select></td>
+                    <td>Lenovo</td>
+                    <td>IC CPU</td>
+                    <td>P70</td>
+                    <td>MT6580A</td>
+                    <td>MT6580A</td>
+                    <td>Dhaka</td>
                     <td>
                       <div class="table-action-btn">
-                        <i class="bi bi-eye-fill" data-bs-toggle="modal" data-bs-target="#viewNotice"></i>
-                        <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#editNotice"></i>
+                        <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#editIc"></i>
+                        <i class="bi bi-trash3" data-bs-toggle="modal" data-bs-target="#deleteIc"></i>
                       </div>
                     </td>
                   </tr>
                   <tr>
-                    <td>Notice Two</td>
-                    <td><span class="notice-description">
-                        We are very glad to announce our First season of iNwe Cricket Community Championship
-                      </span></td>
-                    <td>01-07-2024</td>
-                    <td><select class="form-select" aria-label="Default select example">
-                        <option>Select the satus</option>
-                        <option selected value="1">Pin</option>
-                        <option value="2">Unpin</option>
-                      </select></td>
+                    <td>Lenovo</td>
+                    <td>IC CPU</td>
+                    <td>P70</td>
+                    <td>MT6580A</td>
+                    <td>MT6580A</td>
+                    <td>Dhaka</td>
                     <td>
                       <div class="table-action-btn">
-                        <i class="bi bi-eye-fill"></i>
                         <i class="bi bi-pencil-square"></i>
+                        <i class="bi bi-trash3"></i>
                       </div>
                     </td>
                   </tr>
@@ -115,57 +109,38 @@
         </div>
       </div>
     </section>
-    <div class="modal fade" id="viewNotice" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="editIc" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">View Notice</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <h5>Notice Title</h5>
-            <p>Notice One</p>
-            <h5>Notice Description</h5>
-            <p>We are very glad to announce our First season of iNwe Cricket Community Championship</p>
-            <h5>Notice Date</h5>
-            <p>01-07-2024</p>
-            <h5>Notice Status</h5>
-            <p>Pinned</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="editNotice" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Notice</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Edit IC</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <form>
               <div class="mb-3">
-                <label class="form-label">Notice Title</label>
+                <label class="form-label">Brand</label>
                 <input type="text" class="form-control">
               </div>
               <div class="mb-3">
-                <label class="form-label">Notice Description</label>
-                <textarea name="" id="" class="form-control"></textarea>
+                <label class="form-label">Description</label>
+                <input type="text" class="form-control">
               </div>
               <div class="mb-3">
-                <label class="form-label">Notice Date</label>
-                <input type="date" class="form-control">
+                <label class="form-label">Model</label>
+                <input type="text" class="form-control">
               </div>
               <div class="mb-3">
-                <label class="form-label">Notice Status</label>
-                <select class="form-select" aria-label="Default select example">
-                  <option>Select the satus</option>
-                  <option selected value="1">Pin</option>
-                  <option value="2">Unpin</option>
-                </select>
+                <label class="form-label">Part No</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Code IC'S</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Location</label>
+                <input type="text" class="form-control">
               </div>
               <div class="text-end">
                 <button type="submit" class="btn btn-success">Submit</button>
@@ -178,34 +153,57 @@
         </div>
       </div>
     </div>
-    <div class="modal fade" id="addNotice" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="deleteIc" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Add Notice</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Delete IC</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h4>Are you want to delete?</h4>
+            <div class="text-end">
+              <button type="submit" class="btn btn-danger">Delete</button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="addIc" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Add IC</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <form>
               <div class="mb-3">
-                <label class="form-label">Notice Title</label>
+                <label class="form-label">Brand</label>
                 <input type="text" class="form-control">
               </div>
               <div class="mb-3">
-                <label class="form-label">Notice Description</label>
-                <textarea name="" id="" class="form-control"></textarea>
+                <label class="form-label">Description</label>
+                <input type="text" class="form-control">
               </div>
               <div class="mb-3">
-                <label class="form-label">Notice Date</label>
-                <input type="date" class="form-control">
+                <label class="form-label">Model</label>
+                <input type="text" class="form-control">
               </div>
               <div class="mb-3">
-                <label class="form-label">Notice Status</label>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Select the satus</option>
-                  <option value="1">Pin</option>
-                  <option value="2">Unpin</option>
-                </select>
+                <label class="form-label">Part No</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Code IC'S</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Location</label>
+                <input type="text" class="form-control">
               </div>
               <div class="text-end">
                 <button type="submit" class="btn btn-success">Submit</button>
