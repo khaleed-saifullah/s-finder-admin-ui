@@ -33,13 +33,13 @@
             <a href="ic-list.html"><i class="bi bi-list-ul"></i>IC Lists</a>
           </li>
           <li>
-            <a href="product.html" class="active"><i class="bi bi-list-stars"></i>Products</a>
+            <a href="product.html"><i class="bi bi-list-stars"></i>Products</a>
           </li>
           <li>
             <a href="order.html"><i class="bi bi-bag-check-fill"></i>Orders</a>
           </li>
           <li>
-            <a href="freelancers.html"><i class="bi bi-person-badge-fill"></i>Freelancers</a>
+            <a href="freelancers.html" class="active"><i class="bi bi-person-badge-fill"></i>Freelancers</a>
           </li>
           <li>
             <a href="course.html"><i class="bi bi-camera-video-fill"></i>Courses</a>
@@ -52,38 +52,48 @@
       <div class="home-wrapper">
         <div class="section-header">
           <h2>
-            Categories
+            Freelancers
           </h2>
         </div>
         <div class="main-content-wrappper">
           <div class="user-wrapper">
-            <div class="text-end mb-4">
-              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCategory">Add Category</button>
-            </div>
             <div class="list-table">
               <table class="table table-bordered table-striped table-responsive">
                 <thead>
                   <tr>
+                    <th scope="col">Image</th>
                     <th scope="col">Name</th>
+                    <th scope="col">Designation</th>
+                    <th scope="col">Account Status</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>IC Chip One</td>
+                    <th scope="row">
+                      <img src="images/user-sample-image.png" alt="" class="user-image">
+                    </th>
+                    <td>Khaleed Saifullah</td>
+                    <td>Software Specialist</td>
+                    <td><span class="text-success">Verified</span> </td>
                     <td>
                       <div class="table-action-btn">
-                        <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#editCategory"></i>
-                        <i class="bi bi-trash3" data-bs-toggle="modal" data-bs-target="#deleteCategory"></i>
+                        <i class="bi bi-eye-fill" data-bs-toggle="modal" data-bs-target="#freelancerDetails"></i>
+                        <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#accStatusChange"></i>
                       </div>
                     </td>
                   </tr>
                   <tr>
-                    <td>IC Chip Two</td>
+                    <th scope="row">
+                      <img src="images/user-sample-image.png" alt="" class="user-image">
+                    </th>
+                    <td>Khaleed Saifullah</td>
+                    <td>Software Specialist</td>
+                    <td><span class="text-primary">Pending</span> </td>
                     <td>
                       <div class="table-action-btn">
-                        <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#editCategory"></i>
-                        <i class="bi bi-trash3" data-bs-toggle="modal" data-bs-target="#deleteCategory"></i>
+                        <i class="bi bi-eye-fill" data-bs-toggle="modal" data-bs-target="#freelancerDetails"></i>
+                        <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#accStatusChange"></i>
                       </div>
                     </td>
                   </tr>
@@ -94,18 +104,23 @@
         </div>
       </div>
     </section>
-    <div class="modal fade" id="editCategory" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="accStatusChange" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Category</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Account Status Change</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <form>
               <div class="mb-3">
-                <label class="form-label">Name</label>
-                <input type="text" class="form-control">
+                <label class="form-label">Account Status Change</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option>Select the satus</option>
+                  <option value="1">Pending</option>
+                  <option selected value="2">Verified</option>
+                  <option value="3">Rejected</option>
+                </select>
               </div>
               <div class="text-end">
                 <button type="submit" class="btn btn-success">Submit</button>
@@ -118,42 +133,44 @@
         </div>
       </div>
     </div>
-    <div class="modal fade" id="deleteCategory" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="freelancerDetails" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Product</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Freelancer Details</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <h4>Are you want to delete?</h4>
-            <div class="text-end">
-              <button type="submit" class="btn btn-danger">Delete</button>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="addCategory" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Add Category</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="mb-3">
-                <label class="form-label">Name</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="text-end">
-                <button type="submit" class="btn btn-success">Submit</button>
-              </div>
-            </form>
+            <h5>Freelancer Image</h5>
+            <p><img src="images/user-sample-image.png" alt="" class="user-image"></p>
+            <h5>Freelancer Name</h5>
+            <p>Khaleed Saifullah</p>
+            <h5>Freelancer Info</h5>
+            <p>Hello, I am Sunny. I am from Barishal. I have completed Level-4 in Mobile Eng. I am an expert.</p>
+            <h5>Freelancer ID</h5>
+            <p>A-45813</p>
+            <h5>Freelancer Designation</h5>
+            <p>Software Specialist</p>
+            <h5>Freelancer Country</h5>
+            <p>Bangladesh</p>
+            <h5>Freelancer Address</h5>
+            <p>Mirpur-11,Dhaka</p>
+            <h5>Freelancer Experienced</h5>
+            <p>5+ years</p>
+            <h5>Freelancer Rating</h5>
+            <p>Software Specialist</p>
+            <h5>Freelancer Account Status</h5>
+            <p>Verified</p>
+            <h5>Freelancer Qualification</h5>
+            <p>MBBS, MD(PEDIATRICS)</p>
+            <h5>Freelancer Job Complete</h5>
+            <p>100</p>
+            <h5>Freelancer GSM Code</h5>
+            <p>DT8752</p>
+            <h5>Freelancer Joined Date</h5>
+            <p>26 Aug, 2022</p>
+            <h5>Freelancer Working Time</h5>
+            <p>Sat-Fri(11:30 AM - 11:00 PM)</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
